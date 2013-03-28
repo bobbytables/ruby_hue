@@ -9,6 +9,18 @@ describe RubyHue::Bridge do
   end
 
   describe ".all" do
+    before do
+      stub_request(:get, "http://www.meethue.com/api/nupnp").to_return(body: fixture("bridges.json"))
+    end
 
+    it "returns all bridges" do
+      expect(RubyHue::Bridge.all).to have(1).items
+    end
+  end
+
+  describe "#lights" do
+    it "returns all lights for the bridge" do
+
+    end
   end
 end
