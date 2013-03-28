@@ -20,5 +20,5 @@ Gem::Specification.new do |gem|
   gem.add_development_dependency "rspec", "~> 2.13.0"
   gem.add_development_dependency "awesome_print", "~> 1.1.0"
 
-  gem.add_runtime_dependency "httparty"
+  gem.add_runtime_dependency "httparty", "~> 0.10.2"
 end
