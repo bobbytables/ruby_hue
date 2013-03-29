@@ -21,6 +21,7 @@ Gem::Specification.new do |gem|
   gem.add_development_dependency "awesome_print", "~> 1.1.0"
   gem.add_development_dependency "webmock", "~> 1.11.0"
   gem.add_development_dependency "typhoeus", "~> 0.6.2"
+  gem.add_development_dependency "guard-rspec", "~> 2.5.1gua"
 
   gem.add_runtime_dependency "httparty", "~> 0.10.2"
   gem.add_runtime_dependency "multi_json", "~> 1.7.2"
