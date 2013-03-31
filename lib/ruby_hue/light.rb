@@ -5,18 +5,14 @@ module RubyHue
     def initialize(id, bridge)
       @id = id
       @bridge = bridge
+    end
 
-      refresh_state!
+    def attributes
+      @attributes ||= Client.get_and_parse bridge.resource_url_for("lights/#{id}")
     end
 
     def state
-      @state
-    end
-
-    def refresh_state!
-      url = bridge.resource_url_for("lights/#{id}")
-      light_attributes = Client.get_and_parse(url)
-      @state = light_attributes["state"]
+      Light::State.new(self, attributes["state"])
     end
   end
 end

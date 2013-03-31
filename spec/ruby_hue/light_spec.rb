@@ -11,25 +11,24 @@ describe RubyHue::Light do
   end
 
   describe "#initialize" do
+    let(:instance) { described_class.new(id, bridge) }
+
     it "sets the ID" do
-      instance = described_class.new(id, bridge)
       expect(instance.id).to eq(id)
     end
 
     it "sets the bridge" do
-      instance = described_class.new(id, bridge)
       expect(instance.bridge).to be bridge
     end
 
-    it "finds the state for the light" do
-      instance = described_class.new(id, bridge)
-      expect(instance.state).to be_kind_of Hash
+    it "retrieves the light attributes" do
+      expect(instance.attributes).to be_kind_of Hash
     end
   end
 
-  describe "#refresh_state!" do
-    it "sets the state hash" do
-      expect { light.refresh_state! }.to change { light.state.object_id }
+  describe "#state" do
+    it "returns a Light::State object" do
+      expect(subject.state).to be_kind_of RubyHue::Light::State
     end
   end
 end
