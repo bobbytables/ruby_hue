@@ -3,6 +3,7 @@ require "ruby_hue/client"
 require "ruby_hue/configuration"
 require "ruby_hue/model"
 require "ruby_hue/light"
+require "ruby_hue/light/state"
 require "ruby_hue/bridge"
 
 module RubyHue
