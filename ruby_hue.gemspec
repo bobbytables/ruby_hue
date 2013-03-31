@@ -8,9 +8,9 @@ Gem::Specification.new do |gem|
   gem.version       = RubyHue::VERSION
   gem.authors       = ["Robert Ross"]
   gem.email         = ["robert@creativequeries.com"]
-  gem.description   = %q{TODO: Write a gem description}
-  gem.summary       = %q{TODO: Write a gem summary}
-  gem.homepage      = ""
+  gem.description   = %q{RubyHue is a library for interacting with Hue light bulbs from Phillips.}
+  gem.summary       = %q{RubyHue is a library for interacting with Hue light bulbs from Phillips.}
+  gem.homepage      = "http://github.com/bobbytables/ruby_hue"
 
   gem.files         = `git ls-files`.split($/)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
