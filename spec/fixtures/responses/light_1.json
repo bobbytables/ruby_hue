@@ -1,0 +1,31 @@
+{
+  "state": {
+    "on": true,
+    "bri": 120,
+    "hue": 64782,
+    "sat": 132,
+    "xy": [
+      0.5227,
+      0.3423
+    ],
+    "ct": 488,
+    "alert": "none",
+    "effect": "none",
+    "colormode": "xy",
+    "reachable": true
+  },
+  "type": "Extended color light",
+  "name": "Hue Lamp 1",
+  "modelid": "LCT001",
+  "swversion": "65003148",
+  "pointsymbol": {
+    "1": "none",
+    "2": "none",
+    "3": "none",
+    "4": "none",
+    "5": "none",
+    "6": "none",
+    "7": "none",
+    "8": "none"
+  }
+}

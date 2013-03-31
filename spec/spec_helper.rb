@@ -11,4 +11,5 @@ RSpec.configure do |config|
   config.order = 'random'
 
   config.include FixtureHelpers
+  config.extend LightBridgeHelpers
 end
