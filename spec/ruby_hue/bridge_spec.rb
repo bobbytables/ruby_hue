@@ -19,8 +19,6 @@ describe RubyHue::Bridge do
   end
 
   describe "#lights" do
-    it "returns all lights for the bridge" do
-
-    end
+    it "returns all lights for the bridge"
   end
 end
