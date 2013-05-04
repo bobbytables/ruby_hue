@@ -31,6 +31,9 @@ To get all lights for the bridge:
 ```ruby
 bridge = RubyHue::Bridge.new("192.168.1.100", "yourbridgeusername")
 lights = bridge.lights
+
+lights.state.on = true
+lights.state.save # This will turn on all lights on the bridge
 ```
 
 ### Light Usage

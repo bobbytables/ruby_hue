@@ -1,6 +1,7 @@
 module RubyHue
   class Bridge
-    attr_reader :ip_address, :username
+    attr_reader :ip_address
+    attr_accessor :username
 
     class << self
       def all
