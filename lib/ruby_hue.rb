@@ -6,6 +6,7 @@ module RubyHue
   autoload :Model, "ruby_hue/model"
   autoload :Light, "ruby_hue/light"
   autoload :LightsCollection, "ruby_hue/lights_collection"
+  autoload :LightsCollectionState, "ruby_hue/lights_collection_state"
 end
 
 require "ruby_hue/light/basic_state"
