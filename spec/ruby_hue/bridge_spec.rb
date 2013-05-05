@@ -35,13 +35,8 @@ describe RubyHue::Bridge do
   end
 
   describe "#lights" do
-    before do
-      stub_request(:get, subject.resource_url_for("lights")).to_return(body: fixture("lights.json"))
-    end
-
-    it "returns a collection of light objects" do
-      RubyHue::Light.should_receive(:new).with(kind_of(String), kind_of(RubyHue::Bridge)).exactly(3).times
-      bridge.lights
+    it "returns a light collection" do
+      expect(bridge.lights).to be_kind_of RubyHue::LightsCollection
     end
   end
 end
