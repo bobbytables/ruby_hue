@@ -4,6 +4,9 @@ RubyHue is a library to interact with Hue lights.
 
 http://meethue.com/
 
+[![Code Climate](https://codeclimate.com/github/bobbytables/ruby_hue.png)](https://codeclimate.com/github/bobbytables/ruby_hue)
+[![Gem Version](https://badge.fury.io/rb/ruby_hue.png)](http://badge.fury.io/rb/ruby_hue)
+
 ## Installation
 
 Add this line to your application's Gemfile:
