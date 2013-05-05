@@ -16,21 +16,27 @@ module RubyHue
 
       IMMUTABLE_KEYS = %w(colormode reachable)
 
+      attr_writer :state
+
       def updateable_state
-        @state.reject do |key, value|
+        state.reject do |key, value|
           IMMUTABLE_KEYS.include? key
         end
+      end
+
+      def state
+        @state ||= {}
       end
 
       MAPPING.each do |hue_key, method_name|
         hue_key = hue_key.to_s
         define_method method_name do
-          @state[hue_key]
+          state[hue_key]
         end
 
         unless IMMUTABLE_KEYS.include?(hue_key)
           define_method "#{method_name}=".to_sym do |new_value|
-            @state[hue_key] = new_value
+            state[hue_key] = new_value
           end
         end
       end

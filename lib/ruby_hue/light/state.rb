@@ -4,16 +4,11 @@ module RubyHue
   class Light
     class State
       include BasicState
-      attr_writer :state
       attr_reader :light
 
       def initialize(light, state)
         @light = light
         @state = state
-      end
-
-      def state
-        @state ||= {}
       end
 
       def save

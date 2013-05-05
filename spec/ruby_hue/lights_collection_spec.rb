@@ -19,4 +19,18 @@ describe RubyHue::LightsCollection do
       expect(subject).to have(3).lights
     end
   end
+
+  describe "#state" do
+    it "returns a collection state object" do
+      expect(subject.state).to be_kind_of RubyHue::LightsCollectionState
+    end
+  end
+
+  describe "#each" do
+    before { subject.stub(lights: [RubyHue::Light.new(1, bridge)]) }
+
+    it "yields a light object" do
+      expect {|b| subject.each(&b) }.to yield_with_args(kind_of(RubyHue::Light))
+    end
+  end
 end

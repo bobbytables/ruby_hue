@@ -21,7 +21,7 @@ module RubyHue
     end
 
     def lights
-      LightsCollection.new(self)
+      @lights ||= LightsCollection.new(self)
     end
   end
 end
