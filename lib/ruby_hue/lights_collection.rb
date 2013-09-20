@@ -9,8 +9,8 @@ module RubyHue
     end
 
     def lights
-      Client.get_and_parse(bridge.resource_url_for("lights")).map do |id, light|
-        RubyHue::Light.new(id, self)
+      @lights ||= Client.get_and_parse(bridge.resource_url_for("lights")).map do |id, light|
+        RubyHue::Light.new(id, bridge)
       end
     end
 

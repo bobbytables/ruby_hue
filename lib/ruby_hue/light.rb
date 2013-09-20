@@ -8,7 +8,7 @@ module RubyHue
     end
 
     def attributes
-      @attributes ||= Client.get_and_parse bridge.resource_url_for("lights/#{id}")
+      @attributes ||= Client.get_and_parse(bridge.resource_url_for("lights/#{id}"))
     end
 
     def state
